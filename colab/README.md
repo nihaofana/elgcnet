@@ -1,3 +1,4 @@
+"""
 # ELGC-Net Colab 使用指南
 
 本目录包含了在Google Colab上运行ELGC-Net的优化脚本。
@@ -74,39 +75,4 @@
 2. 检查GPU是否可用
 3. 如遇到内存不足，请减小batch_size
 4. 训练中断后可以从最新检查点恢复（需要修改代码支持resume）
-EOF
-
-# 创建colab/colab_config.py
-echo "创建 colab/colab_config.py..."
-cat > colab/colab_config.py << 'EOF'
 """
-Colab 优化配置
-"""
-import os
-
-class ColabConfig:
-    # GPU设置
-    GPU_IDS = '0'
-    
-    # 数据设置
-    BATCH_SIZE = 8  # T4 GPU适用
-    NUM_WORKERS = 2  # Colab优化
-    
-    # 训练设置
-    MAX_EPOCHS = 100  # 减少训练时间
-    LEARNING_RATE = 0.00031
-    
-    # 项目设置
-    PROJECT_NAME = 'elgcnet_levir_colab'
-    CHECKPOINT_ROOT = './checkpoints'
-    VIS_ROOT = './vis'
-    
-    # 模型设置
-    NET_G = 'ELGCNet'
-    DEC_EMBED_DIM = 256
-    N_CLASS = 2
-    
-    # 数据集设置
-    DATA_NAME = 'LEVIR'
-    IMG_SIZE = 256
-EOF

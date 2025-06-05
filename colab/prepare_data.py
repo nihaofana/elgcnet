@@ -75,12 +75,12 @@ def prepare_colab_dataset(train_samples=200, val_samples=50, test_samples=50):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='准备ELGC-Net Colab数据集')
-    parser.add_argument('--train_samples', type=int, default=200, 
-                        help='训练集样本数量 (默认: 200)')
-    parser.add_argument('--val_samples', type=int, default=50, 
-                        help='验证集样本数量 (默认: 50)')
-    parser.add_argument('--test_samples', type=int, default=50, 
-                        help='测试集样本数量 (默认: 50)')
+    parser.add_argument('--train_samples', type=int, default=100, 
+                        help='训练集样本数量 (默认: 100)')
+    parser.add_argument('--val_samples', type=int, default=25, 
+                        help='验证集样本数量 (默认: 25)')
+    parser.add_argument('--test_samples', type=int, default=25, 
+                        help='测试集样本数量 (默认: 25)')
     args = parser.parse_args()
     
     prepare_colab_dataset(args.train_samples, args.val_samples, args.test_samples)

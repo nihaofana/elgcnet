@@ -8,12 +8,12 @@ class ColabConfig:
     GPU_IDS = '0'
     
     # 数据设置
-    BATCH_SIZE = 8  # T4 GPU适用
+    BATCH_SIZE = 16  # T4 GPU适用
     NUM_WORKERS = 2  # Colab优化
     
     # 训练设置
-    MAX_EPOCHS = 100  # 减少训练时间
-    LEARNING_RATE = 0.00031
+    MAX_EPOCHS = 20  # 减少训练时间
+    LEARNING_RATE = 0.001
     
     # 项目设置
     PROJECT_NAME = 'elgcnet_levir_colab'
