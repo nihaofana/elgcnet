@@ -34,7 +34,8 @@ def eval_colab():
     args.n_class = config.N_CLASS
     args.dec_embed_dim = config.DEC_EMBED_DIM
     args.net_G = config.NET_G
-    args.checkpoint_name = 'checkpoint_best.pt'
+    # args.checkpoint_name = 'checkpoint_best.pt'
+    args.checkpoint_name = 'best_ckpt.pt'
     args.print_models = False
     
     utils.get_device(args)
