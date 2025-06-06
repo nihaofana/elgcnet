@@ -40,7 +40,7 @@ def eval_colab():
     
     utils.get_device(args)
     
-    # 设置目录
+    # 设置目录 
     args.checkpoint_dir = os.path.join(args.checkpoints_root, args.project_name)
     args.vis_dir = os.path.join(args.vis_root, args.project_name)
     os.makedirs(args.vis_dir, exist_ok=True)
