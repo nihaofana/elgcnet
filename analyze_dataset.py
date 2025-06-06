@@ -69,7 +69,7 @@ def analyze_current_dataset():
             else:
                 print("    ✅ 变化比例正常")
         else:
-            print(f"  ❌ 无法分析任何样本")
+            print(f"  ❌ 无法分析任何样本!")
 
 if __name__ == '__main__':
     analyze_current_dataset()
