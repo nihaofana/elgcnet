@@ -63,7 +63,8 @@ class CDEvaluator():
         if os.path.exists(os.path.join(self.checkpoint_dir, checkpoint_name)):
             self.logger.write('loading last checkpoint...\n')
             # load the entire checkpoint
-            checkpoint = torch.load(os.path.join(self.checkpoint_dir, checkpoint_name), map_location='cpu')
+            # checkpoint = torch.load(os.path.join(self.checkpoint_dir, checkpoint_name), map_location='cpu')
+            checkpoint = torch.load(os.path.join(self.checkpoint_dir, checkpoint_name), map_location='cpu', weights_only=False)
             
             ######### remove the module keyword from the state dict ########
             '''
